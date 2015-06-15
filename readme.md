@@ -14,7 +14,7 @@ See Parsers and Formats to see supported input / output formats.
 Through command line:
 
 ```bash
-composer require soapbox/laravel-formatter
+composer require yuki180/laravel-formatter
 ```
 
 Through composer.json:
@@ -22,11 +22,24 @@ Through composer.json:
 ```json
 {
   "require": {
-    "soapbox/laravel-formatter": "2.x"
+    "yuki180/laravel-formatter": "2.x"
   }
 }
 
 ```
+
+Now open up `/config/app.php` and add the service provider to your `providers` array.
+```php
+'providers' => [
+	'SoapBox\Formatter\FormatterServiceProvider',
+]
+```
+
+Now add the alias.
+```php
+'aliases' => [
+	'Formatter' => 'SoapBox\Formatter\Formatter',
+]
 
 ## Parsers
 All of the following are supported formats that the formatter can read from.
