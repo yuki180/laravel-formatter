@@ -31,7 +31,7 @@ Through composer.json:
 Now open up `/config/app.php` and add the service provider to your `providers` array.
 ```php
 'providers' => [
-	'SoapBox\Formatter\FormatterServiceProvider',
+	'yuki180\Formatter\FormatterServiceProvider',
 ]
 ```
 
